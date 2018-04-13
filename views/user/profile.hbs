@@ -1,6 +1,12 @@
 <div class="row">
     <div class="col-md-8 col-md-offset-2">
         <h1>User Profile</h1>
+        <ul class="list-group">
+          <li class="list-group-item">  Email:{{ user.email }}
+          <li class="list-group-item">  Surname:{{ user.surname }}
+          <li class="list-group-item">  Lastname:{{ user.lastname }}
+          <li class="list-group-item">  Nickname:{{ user.nickname }}
+          </ul>
         <hr>
         <h2>My Orders</h2>
         {{# each orders }}

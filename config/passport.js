@@ -15,10 +15,18 @@ passport.deserializeUser(function (id, done) {
 passport.use('local.signup', new LocalStrategy({
     usernameField: 'email',
     passwordField: 'password',
+    surnameField:'surname',
+    lastnameField: 'lastname',
+    nicknameField: 'nickname',
     passReqToCallback: true
-}, function (req, email, password, done) {
+}, function (req, email, password, surname, lastname, nickname, done) {
+
   req.checkBody('email', 'Invalid email format').notEmpty().isEmail();
   req.checkBody('password', 'Please enter password charater larger than 4').notEmpty().isLength({min:4});
+  req.checkBody('surname', 'Please enter your surname').notEmpty();
+  req.checkBody('lastname', 'Please enter your lastname').notEmpty();
+  req.checkBody('nickname', 'Please enter your nickname').notEmpty();
+
     var errors = req.validationErrors();
     if (errors) {
         var messages = [];
@@ -37,6 +45,9 @@ passport.use('local.signup', new LocalStrategy({
         var newUser = new User();
         newUser.email = email;
         newUser.password = newUser.encryptPassword(password);
+        newUser.surname = surname;
+        newUser.lastname = lastname;
+        newUser.nickname = nickname;
         newUser.save(function(err, result) {
            if (err) {
                return done(err);
