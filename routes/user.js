@@ -12,17 +12,26 @@ var csrfProtection = csrf();
 router.use(csrfProtection);
 
 router.get('/profile', isLoggedIn, function (req, res, next) {
-    Order.find({user: req.user}, function(err, orders) {
+    User.find({user: req.user}, function(err, orders) {
         if (err) {
             return res.write('Error!');
         }
-        var cart;
-        orders.forEach(function(order) {
-            cart = new Cart(order.cart);
-            order.items = cart.generateArray();
-        });
-        res.render('user/profile', { orders: orders, user: req.user });
+        res.render('user/profile', {  user: req.user });
     });
+});
+
+router.get('/order', isLoggedIn, function (req, res, next) {
+  Order.find({user: req.user}, function(err, orders) {
+      if (err) {
+          return res.write('Error!');
+      }
+      var cart;
+      orders.forEach(function(order) {
+          cart = new Cart(order.cart);
+          order.items = cart.generateArray();
+      });
+      res.render('user/order', { orders: orders });
+  });
 });
 
 router.get('/logout', isLoggedIn, function (req, res, next) {
