@@ -2,7 +2,9 @@ var Product = require('../models/product');
 
 var mongoose = require('mongoose');
 
+//connect database
 mongoose.connect('mongodb://127.0.0.1:27017/shopping');
+
 
 var products = [
   // data of product
