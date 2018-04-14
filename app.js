@@ -19,6 +19,8 @@ var app = express();
 
 //connect mongoDB path
 mongoose.connect('mongodb://127.0.0.1:27017/shopping');
+
+
 require('./config/passport');
 
 // view engine setup

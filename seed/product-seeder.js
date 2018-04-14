@@ -3,10 +3,11 @@ var Product = require('../models/product');
 var mongoose = require('mongoose');
 
 //connect database local mongodb
-//mongoose.connect('mongodb://127.0.0.1:27017/shopping');
+mongoose.connect('mongodb://127.0.0.1:27017/shopping');
 
 //connect microsoft azure mongodb
-mongoose.connect('mongodb://poly-5022-project:UdewTsaJhJ7k5WXNbnT4IDWSSupkV32eXPVQuYql2p0Mb32i7mgpZmXs6TSVx8yyiyx2Mic24PCzcsCl49vSrw%3D%3D@poly-5022-project.documents.azure.com:10255/?ssl=true');
+//mongoose.connect('mongodb://poly-5022-project:UdewTsaJhJ7k5WXNbnT4IDWSSupkV32eXPVQuYql2p0Mb32i7mgpZmXs6TSVx8yyiyx2Mic24PCzcsCl49vSrw%3D%3D@poly-5022-project.documents.azure.com:10255/?ssl=true');
+
 
 var products = [
   // data of product
