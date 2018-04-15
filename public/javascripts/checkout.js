@@ -1,4 +1,4 @@
-Stripe.setPublishableKey('pk_test_m6ZWLYyvkUAqJzr1fvr1uRj2');
+Stripe.setPublishableKey('pk_test_IWxOjaRYdwWcPq8vTx1KWYBk');
 
 var $form = $('#checkout-form');
 

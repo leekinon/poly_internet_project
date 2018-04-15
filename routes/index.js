@@ -73,9 +73,9 @@ router.post('/checkout', isLoggedIn, function(req, res, next) {
         return res.redirect('/shopping-cart');
     }
     var cart = new Cart(req.session.cart);
-    
+
     var stripe = require("stripe")(
-        "sk_test_fwmVPdJfpkmwlQRedXec5IxR"
+        "sk_test_ZFV6vSbNg2e7SHMLU8UrJF1y"
     );
 
     stripe.charges.create({
@@ -100,7 +100,7 @@ router.post('/checkout', isLoggedIn, function(req, res, next) {
             req.session.cart = null;
             res.redirect('/');
         });
-    }); 
+    });
 });
 
 module.exports = router;
