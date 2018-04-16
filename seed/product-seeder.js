@@ -40,7 +40,7 @@ var products = [
         title: 'Dark Souls 3 Video Game',
         description: 'I died!',
         price: 50
-    })
+    }),
    
     new Product({
         imagePath: 'https://s.yimg.com/wb/images/50839A3D71753DA0F8110A9A587604D05DF0406A',
