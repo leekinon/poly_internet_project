@@ -36,6 +36,7 @@ router.get('/order', isLoggedIn, function (req, res, next) {
 
 router.get('/logout', isLoggedIn, function (req, res, next) {
     req.logout();
+    req.flash('success', 'Successfully logout!');
     res.redirect('/');
 });
 

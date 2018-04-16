@@ -29,6 +29,7 @@ router.get('/add-to-cart/:id', function(req, res, next) {
         cart.add(product, product.id);
         req.session.cart = cart;
         console.log(req.session.cart);
+        req.flash('success', 'Successfully add ' + product.title + ' to shopping chat');
         res.redirect('/');
     });
 });
