@@ -39,7 +39,7 @@ var products = [
         imagePath: 'https://static.bhphoto.com/images/multiple_images/thumbnails/1505747750000_IMG_871414.jpg',
         title: 'Asus ZenBook Pro UX550VE',
         description: 'Slim notebook and the best mobility',
-        price: 11500
+        price: 11550
     }),
 	
 	
