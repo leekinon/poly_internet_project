@@ -41,6 +41,14 @@ var products = [
         description: 'I died!',
         price: 50
     })
+   
+    new Product({
+        imagePath: 'https://s.yimg.com/wb/images/50839A3D71753DA0F8110A9A587604D05DF0406A',
+        title: 'Asus 22" Monitor',
+        description: 'Good Resolution for using',
+        price: 1500
+    })
+
 ];
 
 var done = 0;
