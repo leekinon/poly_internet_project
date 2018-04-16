@@ -17,36 +17,37 @@ var products = [
         description: 'Awesome Game!!!!',
         price: 10
     }),
-    new Product({
-        imagePath: 'http://cdn2us.denofgeek.com/sites/denofgeekus/files/styles/main_wide/public/2016/09/world-of-warcraft.jpg',
-        title: 'World of Warcraft Video Game',
-        description: 'Also awesome? But of course it was better in vanilla ...',
-        price: 20
-    }),
-    new Product({
-        imagePath: 'https://support.activision.com/servlet/servlet.FileDownload?file=00PU000000Rq6tz',
-        title: 'Call of Duty Video Game',
-        description: 'Meh ... nah, it\'s okay I guess',
-        price: 40
-    }),
-    new Product({
-        imagePath: 'https://pmcdeadline2.files.wordpress.com/2014/02/minecraft__140227211000.jpg',
-        title: 'Minecraft Video Game',
-        description: 'Now that is super awesome!',
-        price: 15
-    }),
-    new Product({
-        imagePath: 'https://d1r7xvmnymv7kg.cloudfront.net/sites_products/darksouls3/assets/img/DARKSOUL_facebook_mini.jpg',
-        title: 'Dark Souls 3 Video Game',
-        description: 'I died!',
-        price: 50
-    }),
-   
-    new Product({
+ 
+	new Product({
         imagePath: 'https://s.yimg.com/wb/images/50839A3D71753DA0F8110A9A587604D05DF0406A',
         title: 'Asus 22" Monitor',
         description: 'Good Resolution for using',
         price: 1500
+    }),
+	
+	
+   
+    new Product({
+        imagePath: 'https://static.gigabyte.com/Product/2/6305/2017052415421069_big.png',
+        title: 'X299 AORUS Gaming 7 (rev. 1.0)',
+        description: 'Intel X299 電競主機板搭載RGB Fusion, 數位LED燈條, 3個M.2, M.2散熱片, ESS SABRE 9018 DAC音效, Killer DoubleShot™ Pro 電競網路, 前後USB 3.1 Gen 2 Type-C連接埠',
+        price: 2380
+    }),
+	
+	
+	 new Product({
+        imagePath: 'https://static.bhphoto.com/images/multiple_images/thumbnails/1505747750000_IMG_871414.jpg',
+        title: 'Asus ZenBook Pro UX550VE',
+        description: 'Slim notebook and the best mobility',
+        price: 11500
+    }),
+	
+	
+	 new Product({
+        imagePath: 'https://www.asus.com/media/global/products/blJFZbbtTotymk5e/P_setting_fff_1_90_end_500.png',
+        title: 'Motherboard PRIME H110M2',
+        description: 'Full-featured micro-ATX H110 with 5X Protection II for dependable stability, DDR4 support, and UEFI BIOS with EZ Flash 3',
+        price: 980
     })
 
 ];
