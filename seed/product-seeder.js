@@ -11,12 +11,6 @@ mongoose.connect('mongodb://127.0.0.1:27017/shopping',{useMongoClient:true});
 
 var products = [
   // data of product
-    new Product({
-        imagePath: 'https://upload.wikimedia.org/wikipedia/en/5/5e/Gothiccover.png',
-        title: 'Gothic Video Game',
-        description: 'Awesome Game!!!!',
-        price: 10
-    }),
  
 	new Product({
         imagePath: 'https://s.yimg.com/wb/images/50839A3D71753DA0F8110A9A587604D05DF0406A',
