@@ -2,13 +2,13 @@
     <div class="col-md-8 col-md-offset-2">
       <h2>My Orders</h2>
       {{# each orders }}
-          <div class="panel panel-default">
+          <div class="panel panel-primary">
+            <div class="panel-heading">Items <span class="glyphicon glyphicon-tags"></span></div>
               <div class="panel-body">
                   <ul class="list-group">
                       {{# each this.items }}
                           <li class="list-group-item">
-                              <span class="badge">{{ this.price }}</span>
-                              {{ this.item.title }} | {{ this.qty }} Units
+                              {{ this.item.title }} | {{ this.qty }} Units | <span class="glyphicon glyphicon-usd"><Strong>{{ this.price }}</Strong></span>
                           </li>
                       {{/each}}
                   </ul>
