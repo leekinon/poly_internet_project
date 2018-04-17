@@ -11,38 +11,84 @@ mongoose.connect('mongodb://127.0.0.1:27017/shopping',{useMongoClient:true});
 
 var products = [
   // data of product
- 
+
 	new Product({
-        imagePath: 'https://s.yimg.com/wb/images/50839A3D71753DA0F8110A9A587604D05DF0406A',
-        title: 'Asus 22" Monitor',
-        description: 'Good Resolution for using',
-        price: 1500
+        imagePath: 'https://www.price.com.hk/space/product/236000/236761_ag9ozf_4.png',
+        title: 'Lenovo Yoga Book (ZA150026HK)',
+        description: 'New',
+        price: 5080
     }),
-	
-	
-   
+
+
+
     new Product({
-        imagePath: 'https://static.gigabyte.com/Product/2/6305/2017052415421069_big.png',
-        title: 'X299 AORUS Gaming 7 (rev. 1.0)',
-        description: 'Intel X299 電競主機板搭載RGB Fusion, 數位LED燈條, 3個M.2, M.2散熱片, ESS SABRE 9018 DAC音效, Killer DoubleShot™ Pro 電競網路, 前後USB 3.1 Gen 2 Type-C連接埠',
-        price: 2380
+        imagePath: 'https://www.price.com.hk/space/product/292000/292381_9b9s8b_4.png',
+        title: ' Lenovo IdeaPad 120S-14IAP (81A50025HH)',
+        description: '(BLUE)',
+        price: 3100
     }),
-	
-	
+
+
 	 new Product({
-        imagePath: 'https://static.bhphoto.com/images/multiple_images/thumbnails/1505747750000_IMG_871414.jpg',
-        title: 'Asus ZenBook Pro UX550VE',
-        description: 'Slim notebook and the best mobility',
-        price: 11500
+        imagePath: 'https://www.price.com.hk/space/product/278000/278726_ge2cds_4.jpg',
+        title: 'ASUS ZenBook UX430UA-GV007T',
+        description: '(太空灰)',
+        price: 7580
     }),
-	
-	
+
+
 	 new Product({
-        imagePath: 'https://www.asus.com/media/global/products/blJFZbbtTotymk5e/P_setting_fff_1_90_end_500.png',
-        title: 'Motherboard PRIME H110M2',
-        description: 'Full-featured micro-ATX H110 with 5X Protection II for dependable stability, DDR4 support, and UEFI BIOS with EZ Flash 3',
-        price: 980
-    })
+        imagePath: 'https://www.price.com.hk/space/product/288000/288880_ubg7te_4.jpg',
+        title: 'Acer Swift 3 SF314-52-38Z1',
+        description: '(FHD 1920x1080)',
+        price: 3980
+    }),
+
+    new Product({
+          imagePath: 'https://www.price.com.hk/space/product/279000/279692_gj914j_4.jpg',
+          title: 'Lenovo Ideapad 120S-11IAP (81A400CFHH)',
+          description: 'Hot',
+          price: 5080
+      }),
+
+      new Product({
+          imagePath: 'https://www.price.com.hk/space/product/304000/304116_rfnrvl_4.jpg',
+          title: 'Samsung Notebook 5 (NP500R5N-X01HK)',
+          description: 'New',
+          price: 8699
+      }),
+
+
+     new Product({
+          imagePath: 'https://www.price.com.hk/space/product/304000/304115_nfph9k_4.png',
+          title: 'Acer SF514-52T-518Y (NX.GTMCF.001)',
+          description: 'New',
+          price: 7999
+      }),
+
+
+     new Product({
+          imagePath: 'https://www.price.com.hk/space/product/304000/304108_9sce5m_4.jpg',
+          title: ' ASUS ZenBook UX331UAL-GP8205T',
+          description: '(Rose gold)',
+          price: 8890
+      }),
+
+      new Product({
+            imagePath: 'https://www.price.com.hk/space/product/304000/304102_5snmuy_4.png',
+            title: 'Samsung Notebook 9 Pen (NP930QAA-K02HK)',
+            description: 'New',
+            price: 13709
+        }),
+
+
+
+        new Product({
+            imagePath: 'https://www.price.com.hk/space/product/296000/296710_mdixbc_4.jpg',
+            title: 'ASUS VivoBook X507MA-AS5001T',
+            description: '(Stary Grey)',
+            price:3900
+        })
 
 ];
 
