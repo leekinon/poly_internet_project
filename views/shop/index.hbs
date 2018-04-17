@@ -1,3 +1,11 @@
+
+<div class="jumbotron">
+<h2>Choose  <Strong>Super Computer Store</Strong> for a better shopping experience.</h2>
+<p>We are committed to understanding the needs of our customers and providing the service and products you need for your continued success.<p>
+</div>
+
+
+
 <div class="row">
     <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
         <div id="success" class="alert alert-success" {{#if noMessages}}hidden{{/if}}>
@@ -11,13 +19,13 @@
         {{# each this }}
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <img src="{{ this.imagePath }}" alt="..." class="img-responsive">
+                    <img src="{{ this.imagePath }}" alt="..." class="img-responsive" >
                     <div class="caption">
                         <h3>{{ this.title }}</h3>
                         <p class="description">{{ this.description }}</p>
                         <div class="clearfix">
                             <div class="price pull-left">${{ this.price }}</div>
-                            <a href="/add-to-cart/{{this._id}}" class="btn btn-info pull-right" role="button">Add to Shopping Cart</a>
+                            <a href="/add-to-cart/{{this._id}}" class="btn btn-info pull-right btn-sm" role="button">Add to Shopping Cart <span class="glyphicon glyphicon-shopping-cart"></span></a>
                         </div>
                     </div>
                 </div>
