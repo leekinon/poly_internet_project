@@ -55,9 +55,13 @@ router.get('/remove/:id', function(req, res, next) {
 router.get('/shopping-cart', function(req, res, next) {
    if (!req.session.cart) {
        return res.render('shop/shopping-cart', {products: null});
-   } 
+   }
     var cart = new Cart(req.session.cart);
     res.render('shop/shopping-cart', {products: cart.generateArray(), totalPrice: cart.totalPrice});
+});
+
+router.get('/contact', function(req, res, next) {
+     res.render('other/contact', { title: 'Contact', message: 'Contact page'});
 });
 
 router.get('/checkout', isLoggedIn, function(req, res, next) {
