@@ -31,7 +31,7 @@ var products = [
 
 	 new Product({
         imagePath: 'https://www.price.com.hk/space/product/278000/278726_ge2cds_4.jpg',
-        title: 'ASUS ZenBook UX430UA-GV007T',
+        title: 'ASUS ZenBook (UX430UA-GV007T)',
         description: '(太空灰)',
         price: 7580
     }),
@@ -39,7 +39,7 @@ var products = [
 
 	 new Product({
         imagePath: 'https://www.price.com.hk/space/product/288000/288880_ubg7te_4.jpg',
-        title: 'Acer Swift 3 SF314-52-38Z1',
+        title: 'Acer Swift 3 (SF314-52-38Z1)',
         description: '(FHD 1920x1080)',
         price: 3980
     }),
@@ -69,7 +69,7 @@ var products = [
 
      new Product({
           imagePath: 'https://www.price.com.hk/space/product/304000/304108_9sce5m_4.jpg',
-          title: ' ASUS ZenBook UX331UAL-GP8205T',
+          title: ' ASUS ZenBook (UX331UAL-GP8205T)',
           description: '(Rose gold)',
           price: 8890
       }),
@@ -85,7 +85,7 @@ var products = [
 
         new Product({
             imagePath: 'https://www.price.com.hk/space/product/296000/296710_mdixbc_4.jpg',
-            title: 'ASUS VivoBook X507MA-AS5001T',
+            title: 'ASUS VivoBook (X507MA-AS5001T)',
             description: '(Stary Grey)',
             price:3900
         })

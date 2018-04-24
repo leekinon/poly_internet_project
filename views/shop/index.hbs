@@ -1,7 +1,7 @@
-
 <div class="jumbotron">
-<h2>Choose  <Strong>Super Computer Store</Strong> for a better shopping experience.</h2>
-<p>We are committed to understanding the needs of our customers and providing the service and products you need for your continued success.<p>
+  <h2>Choose  <Strong>Super Computer Store</Strong> for a better shopping experience.</h2>
+  <p>We are committed to understanding the needs of our customers and providing the service and products you need for your continued success.
+    <p>
 </div>
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -35,34 +35,36 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
+<br>
 
 
 
 <div class="row">
-    <div class="col-md-12">
-        <div id="success" class="alert alert-success" {{#if noMessages}}hidden{{/if}}>
-            {{ successMsg }}
-        </div>
+  <div class="col-md-12">
+    <div id="success" class="alert alert-success" {{#if noMessages}} hidden {{/if}}>
+      {{ successMsg }}
     </div>
+  </div>
 </div>
 
-{{# each products }}
-    <div class="row">
-        {{# each this }}
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <img src="{{ this.imagePath }}" alt="..." class="img-responsive" >
-                    <div class="caption">
-                        <h3>{{ this.title }}</h3>
-                        <p class="description">{{ this.description }}</p>
-                        <div class="clearfix">
-                            <div class="price pull-left">${{ this.price }}</div>
-                            <a href="/add-to-cart/{{this._id}}" class="btn btn-info pull-right btn-sm" role="button">Add to Shopping Cart <span class="glyphicon glyphicon-shopping-cart"></span></a>
-                        </div>
-                    </div>
-                </div>
+<br>
+
+<div class="row">
+  {{# each products }}
+    {{# each this }}
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="{{ this.imagePath }}" alt="..." class="img-responsive">
+          <div class="caption">
+            <h3>{{ this.title }}</h3>
+            <p class="description">{{ this.description }}</p>
+            <div class="clearfix">
+              <div class="price pull-left">${{ this.price }}</div>
+              <a href="/add-to-cart/{{this._id}}" class="btn btn-info pull-right btn-sm" role="button">Add to Shopping Cart <span class="glyphicon glyphicon-shopping-cart"></span></a>
             </div>
-        {{/each}}
-    </div>
-{{/each}}
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  {{/each}}
+</div>
