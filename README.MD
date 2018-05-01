@@ -7,6 +7,7 @@ YUEN KA LEUNG  (16001807G)
 Our Web URL:http://web-proj-5322.nets.hk:3000/
 
 Build project in local(MacOS):
+
 Step1 -- install home brew by command line: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 Step2 -- install mongoDB by command line: brew install mongodb
