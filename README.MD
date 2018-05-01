@@ -1,3 +1,3 @@
-## Tutorial on How to Build a Shopping Cart with NodeJS/ Express
+## COMP5322 Project
 
-This repository holds the source code of my YouTube series on how to create a shopping cart with NodeJS/Express/MongoDB
+Our Web URL:http://web-proj-5322.nets.hk:3000/
