@@ -9,9 +9,13 @@ var mongoose = require('mongoose');
 var session = require('express-session');
 var passport = require('passport');
 var flash = require('connect-flash');
-var validator = require('express-validator');
-var MongoStore = require('connect-mongo')(session);
 
+// There are a plugin under Express call express-validator.
+// It is a middleware that validates the body, params, query, headers and cookies of a request and returns a response with errors.
+// We input the following script in app.js to import the express-validator.
+var validator = require('express-validator');
+
+var MongoStore = require('connect-mongo')(session);
 var routes = require('./routes/index');
 var userRoutes = require('./routes/user');
 

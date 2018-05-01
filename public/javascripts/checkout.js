@@ -2,6 +2,11 @@ Stripe.setPublishableKey('pk_test_IWxOjaRYdwWcPq8vTx1KWYBk');
 
 var $form = $('#checkout-form');
 
+//----------------
+// We call stripe API in checkout page. After we get the input value from checkout form,
+// we turn the payment detail element convert to the token and create a event handler to handler the submit event.
+// The handler sends the fields to Stripe for tokenization and prevents the form’s submission.
+//----------------
 $form.submit(function (event) {
     $('#charge-error').addClass('hidden');
     $form.find('button').prop('disabled', true);

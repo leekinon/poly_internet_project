@@ -1,8 +1,9 @@
-module.exports = function Cart(oldCart) {
-    this.items = oldCart.items || {};
-    this.totalQty = oldCart.totalQty || 0;
-    this.totalPrice = oldCart.totalPrice || 0;
+module.exports = function cart(oldcart) {
+    this.items = oldcart.items || {};
+    this.totalQty = oldcart.totalQty || 0;
+    this.totalPrice = oldcart.totalPrice || 0;
 
+//funtion to add the product into cart array.
     this.add = function(item, id) {
         var storedItem = this.items[id];
         if (!storedItem) {
@@ -14,6 +15,7 @@ module.exports = function Cart(oldCart) {
         this.totalPrice += storedItem.item.price;
     };
 
+//funtion to remove one product from item in cart array.
     this.reduceByOne = function(id) {
         this.items[id].qty--;
         this.items[id].price -= this.items[id].item.price;
@@ -25,12 +27,14 @@ module.exports = function Cart(oldCart) {
         }
     };
 
+//funtion to remove whole item from cart array.
     this.removeItem = function(id) {
         this.totalQty -= this.items[id].qty;
         this.totalPrice -= this.items[id].price;
         delete this.items[id];
     };
-    
+
+//update the cart array
     this.generateArray = function() {
         var arr = [];
         for (var id in this.items) {
@@ -39,3 +43,5 @@ module.exports = function Cart(oldCart) {
         return arr;
     };
 };
+
+//the cart array will show in Shopping cart page

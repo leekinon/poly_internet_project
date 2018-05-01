@@ -1,6 +1,22 @@
 var passport = require('passport');
+
+//----------------
+//import the user schema
+//----------------
 var User = require('../models/user');
+
+//----------------
+// We will need to add a extra plugin passport-local into passport.
+// This plugin can make passport to authenticate using a username and password in our web application.
+// It can also make our application to support Connect-style middleware which is including Express.
+//----------------
+
 var LocalStrategy = require('passport-local').Strategy;
+
+//----------------
+//We need to set session to allow application fitting the mongoDB database in correct  authentication layer.
+//Therefore, we add serializeUser and deserializeUser method instances to and from the session.
+//----------------
 
 passport.serializeUser(function (user, done) {
     done(null, user.id);
@@ -12,6 +28,10 @@ passport.deserializeUser(function (id, done) {
     });
 });
 
+//----------------
+//We can call the passport API with enter all the field in signup and accept request callback by passing user data.
+//----------------
+
 passport.use('local.signup', new LocalStrategy({
     usernameField: 'email',
     passwordField: 'password',
@@ -20,6 +40,11 @@ passport.use('local.signup', new LocalStrategy({
     nicknameField: 'nickname',
     passReqToCallback: true
 }, function (req, email, password, surname, lastname, nickname, done) {
+
+//----------------
+//After import express-validator, we can identity the validator on each field such as the password character should be more than six.
+//If it cannot pass the requirement of the condition, it will show error message on our web site.
+//----------------
 
   req.checkBody('email', 'Invalid email format').notEmpty().isEmail();
   req.checkBody('password', 'Please enter password charater larger than 4').notEmpty().isLength({min:4});
@@ -56,6 +81,11 @@ passport.use('local.signup', new LocalStrategy({
         });
     });
 }));
+
+//----------------
+//For Sign in page, we only need to input email and password field.
+//Then. we will add some basic authentication accepts username and password arguments.
+//----------------
 
 passport.use('local.signin', new LocalStrategy({
     usernameField: 'email',

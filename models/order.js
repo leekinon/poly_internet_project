@@ -1,6 +1,8 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
+//create a schema for order that make user can review what product bought in the past
+//show in the My Order List page
 var schema = new Schema({
     user: {type: Schema.Types.ObjectId, ref: 'User'},
     cart: {type: Object, required: true},
